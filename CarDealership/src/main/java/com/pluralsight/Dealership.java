@@ -58,5 +58,11 @@ return null;
     }public ArrayList<Vehicle>getAllVehicles(){
         return null;
     }
+    public void addVehicle(Vehicle vehicle){
+inventory.add(vehicle);
+    }
+    public void removeVehicle(Vehicle vehicle){
+inventory.remove(vehicle);
+    }
 
 }
