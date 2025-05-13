@@ -65,4 +65,14 @@ inventory.add(vehicle);
 inventory.remove(vehicle);
     }
 
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Dealership{");
+        sb.append("name='").append(name).append('\'');
+        sb.append(", address='").append(address).append('\'');
+        sb.append(", phoneNumber='").append(phoneNumber).append('\'');
+        sb.append(", inventory=").append(inventory);
+        sb.append('}');
+        return sb.toString();
+    }
 }
