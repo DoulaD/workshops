@@ -1,6 +1,8 @@
 package com.pluralsight;
 
+import java.io.BufferedReader;
 import java.io.FileInputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -13,7 +15,12 @@ public class DealershipFileManager {
 //        take each piece of data and pass it into constructor of our Dealership to create a specefic
         try {
             // Step 1: Create a FileInputStream object for the file
-            FileInputStream fis = new FileInputStream("data/inventory.csv");
+            FileReader fis = new FileReader("data/inventory.csv");
+            BufferedReader bufferedReader = new BufferedReader(fis);
+            String token = bufferedReader.readLine();
+            String[] dealershipFields = token.split("\\|");
+
+
 
             // Step 2: Create a Scanner object to read from the file
             Scanner scanner = new Scanner(fis);
